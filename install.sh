@@ -41,8 +41,8 @@ gitPull(){
     else
         rm -rf ${QLMainPath}/jbot/*
     fi
-    cd ${QLMainPath}/repo && rm -rf gd && git clone ${daili}https://github.com/curtinlv/gd.git
-    cp -a ${QLMainPath}/repo/gd/* ${QLMainPath}/jbot && cp -a ${QLMainPath}/jbot/conf/* ${QLMainPath}/config && cp -a ${QLMainPath}/jbot/jk_script/* ${QLMainPath}/scripts
+    cd ${QLMainPath}/repo && rm -rf gd && git clone ${daili}https://github.com/zzfiu/gd.git
+    cp -a ${QLMainPath}/repo/gd/* ${QLMainPath}/jbot && cp -a ${QLMainPath}/jbot/conf/* ${QLMainPath}/config
     rm -rf ${QLMainPath}/repo/dockerbot
     mkdir ${QLMainPath}/repo/dockerbot && ln -sf ${QLMainPath}/repo/gd ${QLMainPath}/repo/dockerbot/jbot && ln -sf ${QLMainPath}/repo/gd/conf ${QLMainPath}/repo/dockerbot/config
     if [ ! -d ${QLMainPath}/log/bot ]; then
