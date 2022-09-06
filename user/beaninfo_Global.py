@@ -77,7 +77,7 @@ async def CCBeanDetailInfo(event):
 
     await event.edit('开始查询账号'+text+'的资产，请稍后...')
         
-    cmdtext=f"task {QLMain}/repo/ccwav_QLScript2/bot_jd_bean_info_QL.js now"
+    cmdtext=f"task ql/scripts/bot_jd_bean_info.js now"
     p = await asyncio.create_subprocess_shell(
         cmdtext, stdout=asyncio.subprocess.PIPE, stderr=asyncio.subprocess.PIPE)
     res_bytes, res_err = await p.communicate()
